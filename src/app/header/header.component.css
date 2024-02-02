@@ -1,40 +1,39 @@
-#Emcabezado{
-    background-color: rgba(18, 17, 17, 0.637);
-    text-align: center;
-    width: auto;
-    height: 4%;
-    border: 10px solid rgb(198, 188, 188);
-    
-    h3{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: small;
-        color: aliceblue;
-        
-    }
+.menu {
+    background:linear-gradient(80deg, rgb(255, 255, 255), rgb(240, 240, 244));
+    height: 11%;
+    border-radius: 8px;
 }
 
-#menu{
-    width: auto;
-    height: 8%;
-    background-color: rgb(28, 28, 29);
+.container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-#menu button{
-    margin-left: 10px;
-  justify-content: space-between;
-  border-radius: 10px;
-}
-
-#menu input{
-    width: 70%;
-    border-radius: 5px;
-    
-}
-
-#buscar{
-    margin-right:2%;
     justify-content: space-between;
-
+    align-items: center;
+    width: 100%;
+    padding: 0 px; /* Agregamos un espacio interior de 10px a ambos lados */
 }
+
+
+
+
+input {
+    border-radius: 8px;
+    width: 150%;
+    height: 23px;
+    margin-left: -40px; /* Ajusta el valor según tus necesidades */
+}
+
+img{
+    width: 5%;
+    height:62px;
+     margin-top: 9px;
+     margin-left: -70px; 
+}
+
+ 
+
+  
+
+
+
+
+

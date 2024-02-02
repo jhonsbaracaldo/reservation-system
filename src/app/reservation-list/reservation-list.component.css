@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+
+.carusel1 {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.carusel1 .card {
+    margin-right: 20px; /* Ajusta según tus necesidades */
+    position: relative; /* Asegura que el posicionamiento absoluto sea relativo a la tarjeta */
+}
+
+.carusel1 h2 {
+    background-color: brown;
+    
+    color: white;
+    text-align: center; /* Alinea el texto al centro */
+    padding: 2px ;/* Ajusta según tus necesidades */
+    font-size: small;
+}
+
+.btn.btn-primary {
+    background: linear-gradient(80deg, rgb(255, 60, 0), rgb(237, 6, 6));
+    position: absolute;
+    bottom: 0px; /* Ajusta según tus necesidades */
+    left: 50%; /* Coloca el botón en el centro horizontal de la tarjeta */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    width: 100%; /* Ajusta según tus necesidades */
+    border-radius: 0PX;
+
+    
+}
+
+
+.card{
+    height: 350px;
+    width: 14rem;
+    border-radius: 0%;
+}
+
+.card-img-top{
+    margin-top: -15px;
+    height: 100%;
+    border-radius: 0;
+
+}
+.card a{
+
+    font-size: small;
+}
+

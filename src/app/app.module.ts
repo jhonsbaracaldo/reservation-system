@@ -18,6 +18,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 //Enrutamiento
 
 import { LoginComponent } from './login/login.component';
+import {MatToolbarModule } from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     LoginComponent,
     ViewMovieComponent,
     FooterComponent,
-    LoaderComponent
+    LoaderComponent,
+    RegistroComponent
  
   ],
   imports: [
@@ -39,10 +47,13 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatFormFieldModule,
     MatSlideToggleModule,
-
-    // enrutamiento 
- 
-  ],
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule,
+    MatGridListModule,
+    NgImageSliderModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
