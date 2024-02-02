@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/services/data.service';
+
 
 @Component({
   selector: 'app-view-movie',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-movie.component.css']
 })
 export class ViewMovieComponent {
+constructor(private movieservice:DataService){}
+ 
+  get movies(){
+    return this.movieservice.movies;
+   }
+
 
 }
+
+
+

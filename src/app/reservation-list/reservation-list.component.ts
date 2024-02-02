@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-reservation-list',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation-list.component.css']
 })
 export class ReservationListComponent {
+
+  
 
 }

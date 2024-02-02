@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <div id="Emcabezado">
-    <h3>Movie Peliculas A Tu Estilo</h3>
-</div>
+<mat-toolbar class="menu">
+    <div class="container">
 
-    <nav id="menu">
-        <button id="buscar">buscar</button>
-        <input type="text" placeholder="Buscar">
-        <button>Crear cuenta</button>
-         <button routerLink="/login">Iniciar sesion</button>
-        <button>Menbresia</button>
         
-      
-    </nav>
-
-    <router-outlet></router-outlet>
-
-</body>
-</html>
+         
+             <img src="../../assets/imagenes/logo2.png" alt="">
+           
+ 
+    
+        <a mat-button><mat-icon >theaters</mat-icon>Cartelera</a>
+        <a mat-button><mat-icon >subscriptions</mat-icon>Suscripciones</a>
+        <a mat-button><mat-icon>fastfood</mat-icon></a>
+     
+        <div class="left-section">
+         
+       
+        <input id="input">
+     </div>
+      <div class="right-section">
+        
+        <a mat-button><mat-icon>location_on</mat-icon>Ubicacion</a>
+        <a mat-button ><mat-icon >person</mat-icon> Ingresar</a>
+      </div>
+    </div>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  
