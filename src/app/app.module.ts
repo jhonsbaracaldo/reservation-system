@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './registro/registro.component';
+import { Routes } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
