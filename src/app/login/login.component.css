@@ -34,13 +34,13 @@ div{
 
 
 .section-color h1 {
-    margin-bottom: -5px; /* Ajusta según sea necesario */
+    margin-bottom: -5px; 
     color: white;
     margin-top: 10px;
 }
 
 .section-color p {
-    margin-top: -15px; /* Ajusta según sea necesario */
+    margin-top: -15px; 
     color: white;
 }
 
@@ -72,10 +72,10 @@ div{
 
 #User {
     text-align: center;
-    display: flex;          /* Mostrar los elementos en línea */
-    flex-direction: column;     /* Disposición horizontal */
-    justify-content: center; /* Centrar los elementos horizontalmente */
-    align-items: center;     /* Centrar los elementos verticalmente */
+    display: flex;          
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;    
     margin-top: 17%; 
     color: white;
 }
