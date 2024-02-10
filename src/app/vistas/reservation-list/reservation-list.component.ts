@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/services/data.service';
+import { DataService } from 'src/services/Model/data.service';
 
 @Component({
   selector: 'app-reservation-list',
