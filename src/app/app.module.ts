@@ -26,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
 
 
@@ -40,7 +41,9 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     ViewMovieComponent,
     FooterComponent,
     LoaderComponent,
-    RegistroComponent
+    RegistroComponent,
+    RegistrarUsuarioComponent,
+   
  
   ],
   imports: [
@@ -58,7 +61,7 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     MatGridListModule,
     NgImageSliderModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule, 
 ],
   providers: [],
   bootstrap: [AppComponent]
