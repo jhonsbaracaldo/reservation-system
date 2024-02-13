@@ -7,6 +7,7 @@ import { ReservationComponent } from './vistas/reservation/reservation.component
 import{ LoaderComponent} from './vistas/loader/loader.component';
 import { ReservationListComponent } from './vistas/reservation-list/reservation-list.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 
 const routes: Routes = [
   { path: '', component: LoaderComponent},
@@ -18,7 +19,9 @@ const routes: Routes = [
 
     { path: 'registrar', component: RegistrarUsuarioComponent }
   ]},
- 
+
+  { path: 'actualizar-empleado/:id', component: ActualizarUsuarioComponent},
+  
   
 
 

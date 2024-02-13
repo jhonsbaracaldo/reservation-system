@@ -27,6 +27,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 
 
 
@@ -43,6 +44,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
     LoaderComponent,
     RegistroComponent,
     RegistrarUsuarioComponent,
+    ActualizarUsuarioComponent,
    
  
   ],

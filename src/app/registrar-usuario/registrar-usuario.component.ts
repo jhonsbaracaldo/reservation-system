@@ -21,15 +21,13 @@ ngOnInit(): void {
 guardarUsuario(){
   this.usuarioServicie.registrarUsuario(this.usuario).subscribe(dato=>{
     console.log(dato);
+    this.irAlaListaDeEmpleados();
   },error=>console.log(error));
 
 }
 irAlaListaDeEmpleados(){
-  this.router.navigate (['/usuarios'])
+  this.router.navigate (['usuarios'])
 }
-
-
-
 
 onSubmit(){
   this.guardarUsuario();

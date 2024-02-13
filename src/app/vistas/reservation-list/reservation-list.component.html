@@ -15,6 +15,7 @@
 <table class=" table table-striped">
 <thead class="table-dark">
   <tr>
+    <th>Id</th>
     <th>Nombre</th>
     <th>Apellido</th>
     <th>Telefono</th>
@@ -23,10 +24,16 @@
 </thead>
   <tbody>
     <tr *ngFor="let usuario of usuarios">
+      <td>{{usuario.id}}</td>
       <td>{{usuario.name}}</td>
       <td>{{usuario.lastName}}</td>
       <td>{{usuario.phone}}</td>
       <td>{{usuario.email}}</td>
+      <td>
+        <button [routerLink]="['/actualizar-empleado', usuario.id]" class="btn btn-info">Editar</button>
+         <button (click)="eliminarUsuario(usuario.id)" class ="btn btn-info">Eliminar</button>
+
+      </td>
     </tr>
   </tbody>
   
