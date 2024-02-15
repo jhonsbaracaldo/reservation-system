@@ -15,6 +15,7 @@ import { LoaderComponent } from './vistas/loader/loader.component';
 import {MatInputModule} from '@angular/material/input'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 //Enrutamiento
 
 import { LoginComponent } from './vistas/login/login.component';
@@ -25,9 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './vistas/registro/registro.component';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
