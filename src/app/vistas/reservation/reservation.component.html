@@ -24,23 +24,30 @@
  
 
 <section class="containerprincipal">
+  <form (ngSubmit)=" onSubmit()">
 <section class="formulario">
-    <h1>Reservar</h1>    
-<p>Hora de la funcion</p>
+    <h1>Reservar</h1>  
+    <p>Pelicula</p>
 
-<select id="Hour" name="Hour" title="Selecciona la hora de la función">
-  <option value="Hora">Hora 8:30</option>
-</select>
-<p>Formato</p>
-<select id="Formato" name="Hour" title="Selecciona el formato">
-    <option value="Formato">3D</option>
-    <option value="Formato">2D</option>
-  </select>
-  <p>Asientos</p>
-  <select id="silla" name="Hour" title="Selecciona el tipo de silla">
-    <option value="Silla">Preferencial</option>
-    <option value="Silla">Gente Comun</option>
-  </select> 
+    
+    <p>Pelicula</p>
+    <select id="pelicula" name="pelicula" title="Selecciona la pelicula" [(ngModel)]="booking.name">
+      <option value="Kungfu Panda">Kunfu Panda</option>
+      <option value="Mi villano favorito">Mi villano favorito</option>
+      <option value="Dead pool 3">Dead pool 3</option>
+    </select>
+    
+<p>Hora de la funcion</p>
+<input type="datetime-local" id="datetime" name="datetime" title="Selecciona la fecha y hora de la función" [(ngModel)]="booking.hora_funcion">
+
+
+  <p>Sala</p>
+  <select id="silla" name="Hour" title="Tipo de sala" [(ngModel)]="booking.sala">
+    <option value="Sala 3D">3D</option>
+    <option value="Sala 2D">2D</option>
+  </select > 
+  <p> cantidad de Asientos</p>
+  <input  type="text" name="Asientos" [(ngModel)]="booking.asientos">
 <p></p>  
 
 
@@ -48,7 +55,7 @@
 
 
 </section>
-
+</form>
 <section class="Modulo">
     <video width="640" height="360" controls>
           <source src="../../assets/imagenes/Kung Fu Panda 4  Tráiler Oficial Universal Pictures  HD_1080p.mp4" type="video/mp4">

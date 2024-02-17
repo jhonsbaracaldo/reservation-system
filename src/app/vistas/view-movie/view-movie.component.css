@@ -33,14 +33,32 @@ body {
   margin-left: 10%;
   margin-top: 5px;
 }
+.carusel2 {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 5px;
+}
 
 .carusel1 .card {
   margin-right: 20px; /* Ajusta según tus necesidades */
   position: relative; /* Asegura que el posicionamiento absoluto sea relativo a la tarjeta */
 }
+.carusel2 .card {
+  margin-right: 20px; /* Ajusta según tus necesidades */
+  position: relative; /* Asegura que el posicionamiento absoluto sea relativo a la tarjeta */
+}
 
 .carusel1 h2 {
-  background-color: brown;
+  background-color: rgb(228, 36, 36);
+  
+  color: white;
+  text-align: center; /* Alinea el texto al centro */
+  padding: 2px ;/* Ajusta según tus necesidades */
+  font-size: small;
+}
+
+.carusel2 h2 {
+  background-color: rgb(186, 181, 26);
   
   color: white;
   text-align: center; /* Alinea el texto al centro */
@@ -80,6 +98,9 @@ body {
 .carusel1 .col-md-2 {
    margin-right: 25px; /* Ajusta según tus necesidades */
   }
+  .carusel2 .col-md-2 {
+    margin-right: 25px; /* Ajusta según tus necesidades */
+   }
 
   .card-img-top.img-fluid {
     object-fit: cover; /* Ajusta la imagen para cubrir completamente el área de la tarjeta */
@@ -102,7 +123,7 @@ body {
   }
 
   .btn.btn-primary2 {
-    background: linear-gradient(80deg, rgb(221, 214, 23), rgb(183, 217, 16));
+    background: linear-gradient(80deg, rgb(255, 60, 0), rgb(237, 6, 6));
     position: absolute;
     bottom: 0px; /* Ajusta según tus necesidades */
     left: 50%; /* Coloca el botón en el centro horizontal de la tarjeta */
@@ -115,6 +136,7 @@ body {
 
   #espacio{
     height: 40px;
+ 
   }
 
   .color {
@@ -155,4 +177,19 @@ body {
     font-size:13px;
     color:#aaa;
     margin-bottom:0;
+  }
+  .list-inline{
+    color: white;
+  }
+
+  #afiliados{
+    margin-top: 90px;
+    justify-content: center;
+    text-align: center;
+    
+   
+  }
+
+  #afiliados img {
+    border-radius: 20px;
   }

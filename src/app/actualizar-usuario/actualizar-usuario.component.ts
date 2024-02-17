@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../class/usuario';
+import { Usuario } from '../clases/class/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -15,9 +15,10 @@ export class ActualizarUsuarioComponent implements OnInit {
     private usuarioServicie: UsuariosService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {   }
 
   ngOnInit(): void {
+    
     this.route.params.subscribe(params => {
       const userId = params['id'];
       this.usuarioServicie.obtenerUsuarioPorId(userId).subscribe(

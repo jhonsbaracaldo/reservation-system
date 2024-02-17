@@ -8,6 +8,12 @@ import{ LoaderComponent} from './vistas/loader/loader.component';
 import { ReservationListComponent } from './vistas/reservation-list/reservation-list.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
+import { RegisterMovieComponent } from './register-movie/register-movie.component';
+import { ListaMovieComponent } from './lista-movie/lista-movie.component';
+import { ActualizarMovieComponent } from './actualizar-movie/actualizar-movie.component';
+import { UserlistMovieComponent } from './userlist-movie/userlist-movie.component';
+import { SoonMovieComponent } from './soon-movie/soon-movie.component';
+import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
 
 const routes: Routes = [
   { path: '', component: LoaderComponent},
@@ -21,8 +27,17 @@ const routes: Routes = [
   ]},
 
   { path: 'actualizar-empleado/:id', component: ActualizarUsuarioComponent},
+  { path:'registrar-movie',component:RegisterMovieComponent},
+  {path:'lista-movie',component:ListaMovieComponent},
+  {path:'update-movie/:id',component:ActualizarMovieComponent},
   
-  
+  ///lista de usuarios
+{path:'lista-User',component:UserlistMovieComponent},
+
+{path:'Proximamente',component:SoonMovieComponent},
+{
+  path:'actualizar-reserva',component:ActualizarBookingComponent}
+
 
 
 ];

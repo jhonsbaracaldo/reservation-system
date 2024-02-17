@@ -9,7 +9,7 @@ body {
   #Contenedor { 
     background: rgba(21, 4, 119, 0.508);
     width: 40%;
-    height: 62%;
+    height: 65%;
     padding: 30px;
     text-align: center;
     position: absolute; 
@@ -38,24 +38,28 @@ body {
    }
   
   
-  mat-form-field {
-    width: 40%; 
-    height: 70px  ;
+  .mat-form-field {
+    width: 60%; 
+    height: 140px  ;
     margin-bottom: -5px;
     font-size: 0px;
+    margin-top: -30px;
   
   }
-  
-  button {
-    width: 20%;
+  .button{
+    margin-top: 15px;
+    width: 6px;
+    color: black;
+    background-color:palegoldenrod;
   }
+
   
   #contenedor2 { 
     background-image: url('../../../assets/imagenes/movie.png') ;
     background-size: 137% ; /* La imagen de fondo ocupa el 100% del ancho y ajusta automáticamente la altura */
-      margin-top: -1px;
+      margin-top: -70px;
     width: 20%;
-    height: 62.4%;
+    height: 65.2%;
     padding: 30px;
     text-align: left;
     position: relative; 
@@ -78,7 +82,16 @@ body {
   
     
   }
-  
-  
-  
-  
+
+  .close{
+    position: fixed;
+    margin-top: -25px;
+    margin-left: 100px;
+    background-color: rgb(255, 132, 0);
+    color: white;
+   border-radius: 8px;
+
+   height: 28px;
+   
+
+  }

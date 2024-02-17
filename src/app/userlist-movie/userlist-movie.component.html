@@ -1,0 +1,26 @@
+
+  <h1>Lista de Usuarios</h1>
+  <div class="container">
+  <table class=" table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Telefono</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let  usuarioRegistro of  usuarioRegistro ">
+        <td>{{usuarioRegistro.id}}</td>
+        <td>{{usuarioRegistro.firstName}}</td>
+        <td>{{usuarioRegistro.email}}</td>
+        <td>{{usuarioRegistro.phone}}</td>
+        <td>{{usuarioRegistro.password}}</td>
+        </tr>
+    </tbody>
+    
+    </table>
+  </div>
+  <router-outlet></router-outlet>

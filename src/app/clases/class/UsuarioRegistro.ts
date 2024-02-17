@@ -1,12 +1,9 @@
-export class Usuario {
-
-    id:number;
-    name: string;
+export class UsuarioRegitro{
+    id: number
+    firstName: string;
     lastName:string;
     phone : number;
     email:string;
     password:string;
-
-   
-     
-}
+ 
+ }

@@ -26,16 +26,27 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './vistas/registro/registro.component';
-
+// componentes 
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterMovieComponent } from './register-movie/register-movie.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { ListaMovieComponent } from './lista-movie/lista-movie.component';
+import { ActualizarMovieComponent } from './actualizar-movie/actualizar-movie.component';
+import { UserlistMovieComponent } from './userlist-movie/userlist-movie.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { SoonMovieComponent } from './soon-movie/soon-movie.component';
+import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
+
 
 
 
 
 @NgModule({
   declarations: [
+    
+    UserlistMovieComponent,
     AppComponent,
     HeaderComponent,
     ReservationComponent,
@@ -47,6 +58,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistroComponent,
     RegistrarUsuarioComponent,
     ActualizarUsuarioComponent,
+    RegisterMovieComponent,
+    ListaMovieComponent,
+    ActualizarMovieComponent,
+    SoonMovieComponent,
+    ActualizarBookingComponent,
+    
+
+ 
+
    
  
   ],
@@ -66,6 +86,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgImageSliderModule,
     ReactiveFormsModule,
     FormsModule, 
+    NgxDropzoneModule,
+    MatMenuModule
+    
 ],
   providers: [],
   bootstrap: [AppComponent]

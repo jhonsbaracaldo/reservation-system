@@ -1,18 +1,66 @@
-import { Component } from '@angular/core';
-import { DataService } from 'src/services/Model/data.service';
-
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Booking } from 'src/app/clases/booking';
+import { BookingService } from 'src/app/services/booking.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
   styleUrls: ['./reservation.component.css']
 })
-export class ReservationComponent {
-  constructor(private movieservice:DataService){}
- 
-  get movies(){
-    return this.movieservice.movies;
-   }
+export class ReservationComponent implements OnInit {
 
+  booking: Booking = new Booking();
+  reservationDetails: Booking | null = null;
+
+  constructor(private bookingService: BookingService, private router: Router) { }
+
+  guardarReservacion(): void {
+    // Asegúrate de formatear la fecha antes de enviarla al servicio
+    const bookingToSend: Booking = {
+      ...this.booking,
+      hora_funcion: this.booking.hora_funcion.toString() // Formatea la fecha
+    };
+
+    console.log(bookingToSend); // Verifica los datos antes de enviarlos al servicio
+
+    this.bookingService.registrarReservacion(bookingToSend).subscribe(
+      dato => {
+        console.log(dato);
+        this.reservationDetails = bookingToSend; // Almacena los detalles de la reserva
+        this.mostrarMensaje(this.reservationDetails); // Muestra el mensaje emergente con los detalles de la reserva
+      },
+      error => console.log(error)
+    );
+  }
+
+  mostrarMensaje(booking: Booking): void {
+    swal.fire({
+      title: 'Reserva exitosa',
+      html: `¡Tu reserva ha sido realizada con éxito!<br>
+             Detalles de la reserva:<br>
+             Película: ${booking.name}<br>
+             Hora de la función: ${booking.hora_funcion}<br>
+             Sala: ${booking.sala}<br>
+             Cantidad de asientos: ${booking.asientos}`,
+             icon: 'success',
+             showCancelButton: true, // Mostrar el botón de cancelar
+             confirmButtonText: 'Actualizar', // Texto del botón de actualizar
+             cancelButtonText: 'Ok' // Texto del botón de cancelar
+           }).then((result) => {
+             if (result.isConfirmed) {
+               // Si se hace clic en "Actualizar", dirigir a la página de actualización
+               this.router.navigate(['/actualizar']); // Reemplaza '/actualizar' con la ruta real de actualización
+             }
+           });
+  }
+
+  ngOnInit(): void {
+    console.log(this.booking);
+  }
+
+  onSubmit(): void {
+    this.guardarReservacion();
+  }
 }

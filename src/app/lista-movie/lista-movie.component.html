@@ -1,0 +1,28 @@
+ 
+
+<h1>Lista de peliculas</h1>
+<div class="container">
+<table class=" table table-striped">
+<thead class="table-dark">
+  <tr>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Categoria</th>
+    <th>Fecha</th>
+    <th>Description</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let movie of movie">
+      <td>{{movie.id}}</td>
+      <td>{{movie.name}}</td>
+      <td>{{movie.category}}</td>
+      <td>{{movie.date}}</td>
+      <td>{{movie.description}}</td>
+      <td>
+        <button [routerLink]="['/update-movie',movie.id]" class="btn btn-info">Editar</button>
+         <button (click)="eliminarMovie(movie.id)" class ="btn btn-info">Eliminar</button>
+
+      </td>
+    </tr>
+  </tbody>
