@@ -40,6 +40,7 @@ import { SoonMovieComponent } from './soon-movie/soon-movie.component';
 import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
 import { CookieService } from 'ngx-cookie-service';
 import { ListaBookingComponent } from './lista-booking/lista-booking.component';
+import { DateTimeFormatPipe } from '../pipe/date-time-format.pipe';
 
 
 
@@ -66,6 +67,7 @@ import { ListaBookingComponent } from './lista-booking/lista-booking.component';
     SoonMovieComponent,
     ActualizarBookingComponent,
     ListaBookingComponent,
+    DateTimeFormatPipe,
     
 
  

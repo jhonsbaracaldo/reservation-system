@@ -20,7 +20,7 @@
               <option value="Mi villano favorito">Mi villano favorito</option>
               <option value="Dead pool 3">Dead pool 3</option>
           </select>
-          <p>Hora de la funcion</p>
+          <p>Hora de la función: {{ booking.hora_funcion | dateTimeFormat }}</p> // añadiendo pipe 
           <input type="datetime-local" id="datetime" name="datetime" title="Selecciona la fecha y hora de la función" [(ngModel)]="booking.hora_funcion">
           <p>Sala</p>
           <select id="silla" name="Hour" title="Tipo de sala" [(ngModel)]="booking.sala">
