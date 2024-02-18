@@ -10,7 +10,7 @@ import { UsuarioRegitro } from '../clases/class/UsuarioRegistro';
 export class UsuariosService {
   // back para la vista de los usuarios
   private baseUrl = `${environment.apiUrl}/view`;
-  private baseUrl2 = `${environment.apiUrl}/add`;
+  private baseUrl2 = "http://localhost:8080/v1/api/add";
   private baseUrl3 = `${environment.apiUrl}/update`;
   private baseUrl4 = `${environment.apiUrl}/search`;
   private baseUrl5 = `${environment.apiUrl}/delete`;

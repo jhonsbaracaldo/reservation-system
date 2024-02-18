@@ -22,7 +22,7 @@ import { LoginComponent } from './vistas/login/login.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RegistroComponent } from './vistas/registro/registro.component';
@@ -38,6 +38,8 @@ import { UserlistMovieComponent } from './userlist-movie/userlist-movie.componen
 import { MatMenuModule } from '@angular/material/menu';
 import { SoonMovieComponent } from './soon-movie/soon-movie.component';
 import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
+import { CookieService } from 'ngx-cookie-service';
+import { ListaBookingComponent } from './lista-booking/lista-booking.component';
 
 
 
@@ -63,6 +65,7 @@ import { ActualizarBookingComponent } from './actualizar-booking/actualizar-book
     ActualizarMovieComponent,
     SoonMovieComponent,
     ActualizarBookingComponent,
+    ListaBookingComponent,
     
 
  
@@ -90,7 +93,9 @@ import { ActualizarBookingComponent } from './actualizar-booking/actualizar-book
     MatMenuModule
     
 ],
-  providers: [],
+  providers: [
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

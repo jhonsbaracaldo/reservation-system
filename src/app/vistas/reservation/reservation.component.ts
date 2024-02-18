@@ -17,29 +17,39 @@ export class ReservationComponent implements OnInit {
   constructor(private bookingService: BookingService, private router: Router) { }
 
   guardarReservacion(): void {
-    // Asegúrate de formatear la fecha antes de enviarla al servicio
-    const bookingToSend: Booking = {
-      ...this.booking,
-      hora_funcion: this.booking.hora_funcion.toString() // Formatea la fecha
-    };
-
-    console.log(bookingToSend); // Verifica los datos antes de enviarlos al servicio
-
-    this.bookingService.registrarReservacion(bookingToSend).subscribe(
-      dato => {
-        console.log(dato);
-        this.reservationDetails = bookingToSend; // Almacena los detalles de la reserva
-        this.mostrarMensaje(this.reservationDetails); // Muestra el mensaje emergente con los detalles de la reserva
-      },
-      error => console.log(error)
-    );
+    // Verificar si this.booking.hora_funcion no es undefined antes de llamar a toString()
+    if (this.booking.hora_funcion !== undefined) {
+      const bookingToSend: Booking = {
+        ...this.booking,
+        hora_funcion: this.booking.hora_funcion.toString() // Formatea la fecha
+      };
+  
+      console.log(bookingToSend); // Verifica los datos antes de enviarlos al servicio
+  
+      this.bookingService.registrarReservacion(bookingToSend).subscribe(
+        dato => {
+          console.log(dato);
+          this.reservationDetails = bookingToSend; // Almacena los detalles de la reserva
+          this.mostrarMensaje(this.reservationDetails); // Muestra el mensaje emergente con los detalles de la reserva
+        },
+        error => console.log(error)
+      );
+    } else {
+      console.error('this.booking.hora_funcion es undefined');
+      // Aquí puedes manejar el caso de error según sea necesario para tu aplicación
+    }
   }
 
+
+  
+
+  
   mostrarMensaje(booking: Booking): void {
     swal.fire({
       title: 'Reserva exitosa',
       html: `¡Tu reserva ha sido realizada con éxito!<br>
              Detalles de la reserva:<br>
+             ########movie Reaction###<br>
              Película: ${booking.name}<br>
              Hora de la función: ${booking.hora_funcion}<br>
              Sala: ${booking.sala}<br>
@@ -51,9 +61,15 @@ export class ReservationComponent implements OnInit {
            }).then((result) => {
              if (result.isConfirmed) {
                // Si se hace clic en "Actualizar", dirigir a la página de actualización
-               this.router.navigate(['/actualizar']); // Reemplaza '/actualizar' con la ruta real de actualización
-             }
+               this.router.navigate(['/actualizar-reserva'], { queryParams: { id: booking.id } });
+
+
+              }
            });
+  }
+
+  actualizarEmpleado(id:number){
+    this.router.navigate(['actualizar-reserva',id]);
   }
 
   ngOnInit(): void {

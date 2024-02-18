@@ -13,7 +13,7 @@ export class LoaderComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.router.navigate(['/home']); // Redirigir al componente Home después de 3 segundos
-    }, 5000); // 3000 milisegundos = 3 segundos
+    }, 3000); // 3000 milisegundos = 3 segundos
   }
 
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../services/movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Booking } from '../clases/booking';
+import swal from 'sweetalert2';
+import { BookingService } from '../services/booking.service';
+import { MovieService } from '../services/movie.service';
 import { Movie } from '../clases/movie';
 
 @Component({
@@ -10,54 +13,56 @@ import { Movie } from '../clases/movie';
 })
 export class ActualizarBookingComponent implements OnInit {
 
-  movie: Movie = new Movie();
-  selectedImageUrl: string | ArrayBuffer | null = null;
+  booking:Booking[];
+  constructor(
+    private bookingService: BookingService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {   }
+
+  ngOnInit(): void {
+    this.ObtenerReservacion();
  
-   constructor(private movieService:MovieService, private router:Router, 
-     private route:ActivatedRoute){}
- 
+  }
+
+  actualizarReservacion(id:number){
+    this.router.navigate(['actualizar-reserva',id]);
+  }
+
+
   
- 
-   ngOnInit(): void {
-     
-     this.route.params.subscribe(params => {
-       const movieId = params['id'];
-       this.movieService.obtenerMoviePorId(movieId).subscribe(
-         (data: Movie) => {
-           this.movie = data;
-         },
-         error => {
-           console.error('Error al obtener la pelicula:', error);
-         }
-       );
+
+  private ObtenerReservacion(){
+  this.bookingService.obtenerListaReservaicones().subscribe(dato=>{
+  this.booking=dato;
      });
-   }
+  }
  
-   onSubmit(): void {
-     const movieId = this.movie.id;
-     this.movieService.actualizarMovie(movieId, this.movie).subscribe(
-       data => {
-         console.log('Pelicula actualizada exitosamente:', data);
-      
-         this.router.navigate(['/lista-movie']);
-       },
-       error => {
-         console.error('Error al actualizar la peliula:', error);
-       }
-     );
-   }
- 
- 
-   onFileSelected(event: any) {
-     const file: File = event.target.files[0];
-     if (file) {
-       const reader = new FileReader();
-       reader.readAsDataURL(file);
-       reader.onload = () => {
-         this.selectedImageUrl = reader.result;
-       };
-     }
-   }
- }
- 
- 
+
+  
+  eliminarReservacion(id: number): void {
+  
+    swal.fire({
+      title: '¿Estás seguro?',
+      text: '¿Estás seguro de que deseas eliminar este Reservacion?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then(result => {
+      if (result.value) {
+         this.bookingService.eliminarReservation(id).subscribe(
+          () => {
+            this.booking = this.booking.filter( bookings=> bookings.id !== id);
+            swal.fire('Eliminado!', 'La reserva se elimino  exitosamente.', 'success');
+          },
+          error => {
+            console.error('Error al eliminar la pelicula', error);
+            swal.fire('Error', 'Se produjo un error al eliminar la reserva ', 'error');
+          }
+        );
+      }
+    });
+  }
+
+}

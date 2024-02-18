@@ -14,11 +14,12 @@ import { ActualizarMovieComponent } from './actualizar-movie/actualizar-movie.co
 import { UserlistMovieComponent } from './userlist-movie/userlist-movie.component';
 import { SoonMovieComponent } from './soon-movie/soon-movie.component';
 import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
+import { ListaBookingComponent } from './lista-booking/lista-booking.component';
 
 const routes: Routes = [
   { path: '', component: LoaderComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: ViewMovieComponent },
+  { path: 'home', component: ViewMovieComponent},
   { path: 'registre', component: RegistroComponent },
   { path: 'reservation', component: ReservationComponent },
 {path: 'usuarios',component:ReservationListComponent,children:[
@@ -36,7 +37,8 @@ const routes: Routes = [
 
 {path:'Proximamente',component:SoonMovieComponent},
 {
-  path:'actualizar-reserva',component:ActualizarBookingComponent}
+  path:'lista-reserva',component:ActualizarBookingComponent},
+  {path:'actualizar-reserva/:id',component:ListaBookingComponent}
 
 
 
