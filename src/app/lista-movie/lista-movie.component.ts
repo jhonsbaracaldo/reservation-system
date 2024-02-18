@@ -1,62 +1,59 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from '../clases/movie';
+import swal from 'sweetalert2';
 import { MovieService } from '../services/movie.service';
 import { Router } from '@angular/router';
-import swal from 'sweetalert2';
+
 @Component({
   selector: 'app-lista-movie',
   templateUrl: './lista-movie.component.html',
   styleUrls: ['./lista-movie.component.css']
 })
-export class ListaMovieComponent {
+export class ListaMovieComponent implements OnInit {
+  movies: Movie[];
 
-  
-
- movie:Movie[];
-
-
- constructor(private movieService:MovieService, private router:Router){}
+  constructor(private movieService: MovieService, private router: Router) {}
 
   ngOnInit(): void {
-    this.obtenerMovie();
- 
+    this.obtenerMovies();
   }
 
-  actualizarMovie(id:number){
-    this.router.navigate(['actualizar-empleado',id]);
+  actualizarMovie(id: number): void {
+    this.router.navigate(['actualizar-empleado', id]);
   }
 
-
-  private obtenerMovie(){
-  this.movieService.obtenerListaMovie().subscribe(dato=>{
-  this.movie =dato;
-     });
+  private obtenerMovies(): void {
+    this.movieService.obtenerListaMovie().subscribe(
+      data => {
+        this.movies = data;
+      },
+      error => {
+        console.error('Error al obtener las películas:', error);
+      }
+    );
   }
 
   eliminarMovie(id: number): void {
-  
     swal.fire({
       title: '¿Estás seguro?',
-      text: '¿Estás seguro de que deseas eliminar este Pelicula?',
+      text: '¿Estás seguro de que deseas eliminar esta película?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Eliminar',
       cancelButtonText: 'Cancelar'
     }).then(result => {
       if (result.value) {
-         this.movieService.eliminarMovie(id).subscribe(
+        this.movieService.eliminarMovie(id).subscribe(
           () => {
-            this.movie = this.movie.filter(movies => movies.id !== id);
-            swal.fire('Eliminado!', 'La pelicula ha sido eliminado exitosamente.', 'success');
+            this.movies = this.movies.filter(movie => movie.id !== id);
+            swal.fire('Eliminada!', 'La película ha sido eliminada exitosamente.', 'success');
           },
           error => {
-            console.error('Error al eliminar la pelicula', error);
-            swal.fire('Error', 'Se produjo un error al eliminar la pelicula ', 'error');
+            console.error('Error al eliminar la película', error);
+            swal.fire('Error', 'Se produjo un error al eliminar la película ', 'error');
           }
         );
       }
     });
   }
-  
-
 }
