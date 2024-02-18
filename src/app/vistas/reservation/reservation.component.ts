@@ -61,7 +61,7 @@ export class ReservationComponent implements OnInit {
            }).then((result) => {
              if (result.isConfirmed) {
                // Si se hace clic en "Actualizar", dirigir a la página de actualización
-               this.router.navigate(['/actualizar-reserva'], { queryParams: { id: booking.id } });
+               this.router.navigate(['/lista-reserva'], { queryParams: { id: booking.id } });
 
 
               }

@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Usuario } from 'src/app/clases/class/usuario';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DataService } from 'src/services/Model/data.service';
+import { Reservacion } from 'src/services/Model/Interfaz/reservation.interface';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-reservation-list',
@@ -11,7 +13,11 @@ import { DataService } from 'src/services/Model/data.service';
   styleUrls: ['./reservation-list.component.css']
 })
 export class ReservationListComponent implements OnInit{
-
+  reservaciones: Reservacion[] = [
+    { id: 1, nombre: 'Juan', apellido: 'Pérez', telefono: '123456789', email: 'juan@example.com' },
+    { id: 2, nombre: 'María', apellido: 'García', telefono: '987654321', email: 'maria@example.com' },
+    { id: 3, nombre: 'Pedro', apellido: 'Rodríguez', telefono: '456789123', email: 'pedro@example.com' }
+  ];
 
   usuarios :Usuario[];
 
@@ -20,11 +26,17 @@ export class ReservationListComponent implements OnInit{
 
   ngOnInit(): void {
     this.obtenerUsuarios();
- 
+    this.obtenerReservaciones().subscribe(reservaciones => {
+      console.log(reservaciones);
+    });
   }
 
   actualizarEmpleado(id:number){
     this.router.navigate(['actualizar-empleado',id]);
+  }
+
+  private obtenerReservaciones(): Observable<Reservacion[]> {
+    return of(this.reservaciones);
   }
 
 
