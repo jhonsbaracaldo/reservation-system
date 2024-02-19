@@ -70,5 +70,6 @@ describe('ReservationComponent', () => {
     const guardarReservacionSpy = spyOn(component, 'guardarReservacion');
     component.onSubmit();
     expect(guardarReservacionSpy).toHaveBeenCalled();
+    //añadiendo pruebas 
   });
 });
