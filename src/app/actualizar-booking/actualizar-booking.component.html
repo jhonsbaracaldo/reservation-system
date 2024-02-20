@@ -1,12 +1,13 @@
+
 <div id="Contenedor">
        
 
-<h1>Reserva </h1>
+<h1>Actualizar Reserva</h1>
 <div class="container">
 <table class=" table table-striped" style="width: 100%;">
 <thead class="table-dark"  style="width: 100%;">
   <tr>
-    <th>Id</th>
+      
     <th>Nombre de la pelicula</th>
     <th>Hora</th>
     <th>Sala</th>
@@ -17,11 +18,14 @@
 </thead>
   <tbody>
     <tr *ngFor="let booking of booking ">
-      <td>{{booking.id}}</td>
+     
       <td>{{booking.name}}</td>
       <td>{{booking.hora_funcion}}</td>
       <td>{{booking.sala}}</td>
       <td>{{booking.asientos }}</td>
+
+     
+
       <td>
         <button [routerLink]="['/actualizar-reserva', booking.id]" class="btn btn-info">Editar</button>
          <button (click)="eliminarReservacion(booking.id)" class ="btn btn-info">Eliminar</button>
@@ -30,7 +34,9 @@
     </tr>
   </tbody>
    </table>
+
+   <
    
 </div>
 
-    
+

@@ -1,16 +1,15 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Booking } from '../clases/booking';
 import swal from 'sweetalert2';
 import { BookingService } from '../services/booking.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
-import { MovieService } from '../services/movie.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-booking',
   templateUrl: './lista-booking.component.html',
   styleUrls: ['./lista-booking.component.css']
 })
-export class ListaBookingComponent implements OnInit, OnChanges {
+export class ListaBookingComponent implements OnInit {
 
   booking: Booking = new Booking();
   selectedImageUrl: string | ArrayBuffer | null = null;
@@ -21,33 +20,31 @@ export class ListaBookingComponent implements OnInit, OnChanges {
     this.obtenerReservaciones(); // Llama a la función para obtener las reservaciones al inicializar el componente
   }
 
-  ngOnChanges(): void {
-    this.obtenerReservaciones(); // Llama a la función para obtener las reservaciones cuando hay cambios en el componente
-  }
-
   obtenerReservaciones(): void {
-    this.route.params.subscribe(params => {
-      const BookingId = params['id'];
+    const BookingId = this.route.snapshot.params['id'];
+    if (BookingId) {
       this.bookingService.obtenerReservacionPorId(BookingId).subscribe(
         (data: Booking) => {
           this.booking = data;
         },
         error => {
-          console.error('Error al obtener la pelicula:', error);
+          console.error('Error al obtener la reserva:', error);
         }
       );
-    });
+    } else {
+      console.error('BookingId es undefined');
+    }
   }
 
   onSubmit(): void {
     const BookingId = this.booking.id;
     this.bookingService.actualizarReservacion(BookingId, this.booking).subscribe(
       data => {
-        console.log('Pelicula actualizada exitosamente:', data);
+        console.log('Reservación actualizada exitosamente:', data);
         this.router.navigate(['/lista-movie']);
       },
       error => {
-        console.error('Error al actualizar la peliula:', error);
+        console.error('Error al actualizar la reserva:', error);
       }
     );
   }

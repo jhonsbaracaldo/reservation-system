@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+#boton button {
+    margin-right: 10px; /* Ajusta el valor según sea necesario para la separación deseada */
+  }
+  
+  #boton button:last-child {
+    margin-left: 10px; 
+
+  }
+
+  

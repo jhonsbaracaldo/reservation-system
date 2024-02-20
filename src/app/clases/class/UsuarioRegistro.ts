@@ -5,5 +5,6 @@ export class UsuarioRegitro{
     phone : number;
     email:string;
     password:string;
+    mostrarContrasena: boolean; 
  
  }

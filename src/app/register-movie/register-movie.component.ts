@@ -29,7 +29,7 @@ selectedImageUrl: string | ArrayBuffer | null = null;
   
   }
   irAlaListaDeEmpleados(){
-    this.router.navigate (['usuarios'])
+    this.router.navigate ([''])
   }
   
   onSubmit(){

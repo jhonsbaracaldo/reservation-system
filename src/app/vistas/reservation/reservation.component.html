@@ -1,3 +1,4 @@
+<body>
 <div class="cabezera">
   <img src="../../assets/imagenes/kunfu.jpg" alt="">
   <section class="titulo">
@@ -20,7 +21,7 @@
               <option value="Mi villano favorito">Mi villano favorito</option>
               <option value="Dead pool 3">Dead pool 3</option>
           </select>
-          <p>Hora de la función: {{ booking.hora_funcion | dateTimeFormat }}</p> // añadiendo pipe 
+          <p>Hora de la función: {{ booking.hora_funcion | dateTimeFormat }}</p> 
           <input type="datetime-local" id="datetime" name="datetime" title="Selecciona la fecha y hora de la función" [(ngModel)]="booking.hora_funcion">
           <p>Sala</p>
           <select id="silla" name="Hour" title="Tipo de sala" [(ngModel)]="booking.sala">
@@ -36,10 +37,16 @@
   <section class="Modulo">
       <video width="640" height="360" controls>
           <source src="../../assets/imagenes/Kung Fu Panda 4  Tráiler Oficial Universal Pictures  HD_1080p.mp4" type="video/mp4">
-      </video>
+         
+        </video>
+        <ng-container id="notifiacacion" *ngIf="!reservationDetails">
+          <h2>No existen reservaciones creadas aún.</h2>
+        </ng-container>
   </section>
   <br>
+ 
 </section>
+
 
 <section class="color">
   <ul class="list-inline">
@@ -51,8 +58,7 @@
   </ul>
   <p class="copyright">Movie Reaction © 2024</p>
 </section>
+</body>
 
-<!-- ngIf para mostrar el mensaje cuando no hay reservaciones -->
-<ng-container *ngIf="!reservationDetails">
-  <h2>No existen reservaciones creadas aún.</h2>
-</ng-container>
+
+

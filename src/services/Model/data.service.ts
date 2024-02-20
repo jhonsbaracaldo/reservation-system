@@ -14,19 +14,19 @@ export class DataService {
     name:'Kunfu Panda 4',
      Estreno:'25-01-2024',
      genero:'Infantil',
-     image:'card1.png'
+     image:'Kung_Fu_Panda.jpg'
    },
    {
     name:'Deapool 3',
      Estreno:'25-03-2024',
      genero:'Accion y comedia',
-     image:'deadpool-3.webp'
+     image:'trailer4.jpg'
    },
    {
-    name:'Mi villano favorito 4',
+    name:'Bood Marly',
      Estreno:'25-04-2024',
-     genero:'Infantil',
-     image:'cine1.webp'
+     genero:'Musical',
+     image:'trailer5.jpg'
    },
 
    {
@@ -39,8 +39,9 @@ export class DataService {
     name:'Mi villano favorito 4',
      Estreno:'25-04-2024',
      genero:'Infantil',
-     image:'cine1.webp'
-   }
+     image:'Gru.jpg'
+   },
+   
   
   ];
 

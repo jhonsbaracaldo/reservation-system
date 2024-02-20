@@ -24,5 +24,10 @@ export class UserlistMovieComponent  implements OnInit {
       this.usuarioRegistro =dato;
          });
       }
+  
+      Esconcerpassword(usuario: UsuarioRegitro): void {
+        usuario.mostrarContrasena = !usuario.mostrarContrasena;
+      }
+      
 
 }

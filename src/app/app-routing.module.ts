@@ -38,7 +38,8 @@ const routes: Routes = [
 {path:'Proximamente',component:SoonMovieComponent},
 {
   path:'lista-reserva',component:ActualizarBookingComponent},
-  {path:'actualizar-reserva/:id',component:ListaBookingComponent}
+  {path:'actualizar-reserva/:id',component:ListaBookingComponent},
+  {path:'actualizar-reserva',component:ListaBookingComponent}
 
 
 

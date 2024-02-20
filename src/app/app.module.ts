@@ -68,6 +68,8 @@ import { DateTimeFormatPipe } from '../pipe/date-time-format.pipe';
     ActualizarBookingComponent,
     ListaBookingComponent,
     DateTimeFormatPipe,
+  
+   
     
 
  
@@ -92,7 +94,8 @@ import { DateTimeFormatPipe } from '../pipe/date-time-format.pipe';
     ReactiveFormsModule,
     FormsModule, 
     NgxDropzoneModule,
-    MatMenuModule
+    MatMenuModule,
+ 
     
 ],
   providers: [

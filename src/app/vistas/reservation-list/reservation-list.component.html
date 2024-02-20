@@ -1,3 +1,5 @@
+<body>
+  
 
 <nav class="navbar navbar-expand sm bg-dark navbar-dark ">
   <ul class="navbar-nav">
@@ -22,8 +24,9 @@
     <th>Id</th>
     <th>Nombre</th>
     <th>Apellido</th>
-    <th>Telefono</th>
+    <th></th>
     <th>Email</th>
+    <th></th>
   </tr>
 </thead>
   <tbody>
@@ -33,8 +36,8 @@
       <td>{{usuario.lastName}}</td>
       <td>{{usuario.phone}}</td>
       <td>{{usuario.email}}</td>
-      <td>
-        <button [routerLink]="['/actualizar-empleado', usuario.id]" class="btn btn-info">Editar</button>
+      <td id="boton">
+        <button   [routerLink]="['/actualizar-empleado', usuario.id]" class="btn btn-info  ">Editar</button>
          <button (click)="eliminarUsuario(usuario.id)" class ="btn btn-info">Eliminar</button>
 
       </td>
@@ -43,4 +46,5 @@
   
   </table>
 </div>
+</body>
 <router-outlet></router-outlet>

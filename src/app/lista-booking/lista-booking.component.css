@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.boton{
+    margin-top: 8px;
+    background-color: goldenrod;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border-radius: 15px;
+}

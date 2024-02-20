@@ -6,7 +6,7 @@ export class Usuario {
     phone : number;
     email:string;
     password:string;
-
+  
    
      
 }

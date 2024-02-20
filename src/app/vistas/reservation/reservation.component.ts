@@ -49,7 +49,7 @@ export class ReservationComponent implements OnInit {
       title: 'Reserva exitosa',
       html: `¡Tu reserva ha sido realizada con éxito!<br>
              Detalles de la reserva:<br>
-             ########movie Reaction###<br>
+             ####### Movie Reaction #######<br>
              Película: ${booking.name}<br>
              Hora de la función: ${booking.hora_funcion}<br>
              Sala: ${booking.sala}<br>
@@ -61,15 +61,16 @@ export class ReservationComponent implements OnInit {
            }).then((result) => {
              if (result.isConfirmed) {
                // Si se hace clic en "Actualizar", dirigir a la página de actualización
-               this.router.navigate(['/actualizar-reserva'], { queryParams: { id: booking.id } });
+               this.actualizarEmpleado(booking.id);
 
-
+               
               }
+            
            });
   }
 
   actualizarEmpleado(id:number){
-    this.router.navigate(['actualizar-reserva',id]);
+    this.router.navigate(['lista-reserva'])
   }
 
   ngOnInit(): void {
