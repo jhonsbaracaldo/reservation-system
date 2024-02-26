@@ -25,7 +25,7 @@ selectedImageUrl: string | ArrayBuffer | null = null;
     this.movieService.registrarMovie(this.movie).subscribe(dato=>{
       console.log(dato);
       this.irAlaListaDeEmpleados();
-    },error=>console.log(error));
+    },error=>console.log(error));  
   
   }
   irAlaListaDeEmpleados(){

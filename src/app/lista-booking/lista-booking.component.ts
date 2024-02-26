@@ -41,7 +41,7 @@ export class ListaBookingComponent implements OnInit {
     this.bookingService.actualizarReservacion(BookingId, this.booking).subscribe(
       data => {
         console.log('Reservación actualizada exitosamente:', data);
-        this.router.navigate(['/lista-movie']);
+        this.router.navigate(['/lista-reserva']);
       },
       error => {
         console.error('Error al actualizar la reserva:', error);

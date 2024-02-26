@@ -49,7 +49,7 @@ export class ReservationComponent implements OnInit {
       title: 'Reserva exitosa',
       html: `¡Tu reserva ha sido realizada con éxito!<br>
              Detalles de la reserva:<br>
-             ####### Movie Reaction #######<br>
+             ####### Vales monda Mauricio #######<br>
              Película: ${booking.name}<br>
              Hora de la función: ${booking.hora_funcion}<br>
              Sala: ${booking.sala}<br>
@@ -75,6 +75,7 @@ export class ReservationComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.booking);
+    console.log(this.mostrarMensaje);
   }
 
   onSubmit(): void {

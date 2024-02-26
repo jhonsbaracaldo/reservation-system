@@ -10,7 +10,7 @@
 <body>
 
  
-  <div>
+  <div class="formulario">
     <section class="section-color">
 
     
@@ -26,15 +26,15 @@
     <h4>Usuario</h4>
 <mat-form-field >
    <mat-label><mat-icon>person</mat-icon></mat-label>
-    <input matInput name="name">
+    <input matInput  formControlName="email">
   </mat-form-field>
   <h4>Contraseña</h4>
   <mat-form-field>
     <mat-label>******</mat-label>
-    <input matInput  name="password">
+    <input matInput  type="password"  formControlName="password">
   </mat-form-field>
 
-  <button >Ingresar</button>
+  <button routerLink="/home" >Ingresar</button>
 
   <a href=""><p>¿Olvidaste tu contraseña?</p></a>
 

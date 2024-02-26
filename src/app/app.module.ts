@@ -99,6 +99,8 @@ import { DateTimeFormatPipe } from '../pipe/date-time-format.pipe';
     
 ],
   providers: [
+    CookieService,
+  
   
   ],
   bootstrap: [AppComponent]

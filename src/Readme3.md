@@ -28,4 +28,4 @@ Cine reaction es un proyecto de sistemas de reserva donde el usuario podra reser
 - Modulo para cargar la pelicula desde el administrador
 
 ##Tema
-del sprint me gusto el tema del htppclient que nos permite conectar nuestro back con el from es bastante importante entederlo y la organizacion.
+fue un esceneario muy bueno el ver como desarrolaba mis habilidades en front 
