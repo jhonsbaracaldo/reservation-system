@@ -1,0 +1,30 @@
+
+<body>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Actualizar empleado</h3>
+    <form (ngSubmit)="onSubmit()" #formulario="ngForm">
+        <div class="form-group">
+            <label>ID</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="usuario.id" name="id" required>
+          </div>
+      
+        <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.name" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label>Apellido:</label>
+        <input type="text" class="form-control" id="apellido" [(ngModel)]="usuario.lastName" name="apellido" required>
+      </div>
+      <div class="form-group">
+        <label>Teléfono:</label>
+        <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.phone" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="usuario.email" name="email" required>
+      </div>
+      <button type="submit" class="btn btn-success">Actualizar</button>
+    </form>
+  </div>
+</body>

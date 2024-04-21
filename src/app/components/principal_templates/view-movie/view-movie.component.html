@@ -1,0 +1,226 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="view-movie.component.css">
+      <title>Document</title>
+  </head>
+  <body>
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../assets/imagenes/cine1.webp " class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/imagenes/fondoMarvel1.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+  
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/imagenes/cinema 3.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+    
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <nav id="secondmenu">
+    <a mat-button (click)="scrollToElement('preventa')"><mat-icon>movie</mat-icon>Preventa</a>
+
+          <a mat-button routerLink="/Proximamente"><mat-icon><span class="material-symbols-outlined">
+            date_range
+            </span  ></mat-icon>Proximamente</a>
+          <a mat-button (click)="scrollToElement('afiliados')" ><mat-icon>group</mat-icon>Afiliados</a>
+
+  </nav>
+
+  <div id="espacio"></div>
+  <h2 id="estreno">ESTRENOS / CARTELERA</h2>
+  <div id="carouselExample1" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+    <section class="carusel1">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div *ngFor="let movie of movies" class="col-md-2">
+              <div class="card" >
+              <h2 class="h2">Estreno</h2>
+              
+              
+                <div class="card-body">
+                  <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                  <a routerLink="/reservation" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </section>
+      </div>
+      <div class="carousel-item">
+  
+        <section class="carusel1">
+          <section>
+            <div class="container">
+              <div class="row">
+                <div *ngFor="let movie of movies" class="col-md-2">
+                  <div class="card" >
+                  <h2 class="h2">Estreno</h2>
+                  
+                  
+                    <div class="card-body">
+                      <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                      <a routerLink="/reservation" class="btn btn-primary">Reservar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </section>
+      </div>
+      <div class="carousel-item">
+        <section class="carusel1">
+          <section>
+            <div class="container">
+              <div class="row">
+                <div *ngFor="let movie of movies" class="col-md-2">
+                  <div class="card" >
+                  <h2 class="h2">Estreno</h2>
+            
+                    <div class="card-body">
+                      <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                      <a routerLink="/reservation" class="btn btn-primary">Reservar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </section>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="espacio"></div>
+
+  <h2 id="preventa">PREVENTA / PRÓXIMO ESTRENO</h2>
+  <div id="carouselExample2" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+    <section class="carusel2">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div *ngFor="let movie of movies" class="col-md-2">
+              <div class="card" >
+              <h2 class="h2">Proximamente</h2>
+              <div class="card-body">
+                  <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                  <a routerLink="/Proximamente" class="btn btn-primary2">Preventa</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </section>
+      </div>
+      <div class="carousel-item">
+        <section class="carusel2">
+          <section>
+            <div class="container">
+              <div class="row">
+                <div *ngFor="let movie of movies" class="col-md-2">
+                  <div class="card" >
+                  <h2 class="h2">Estreno</h2>
+                    <div class="card-body">
+                      <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                      <a routerLink="/Proximamente" class="btn btn-primary2">Preventa</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </section>
+      </div>
+    
+      <div class="carousel-item">
+        <section class="carusel2">
+          <section>
+            <div class="container">
+              <div class="row">
+                <div *ngFor="let movie of movies" class="col-md-2">
+                  <div class="card" >
+                  <h2 class="h2">Estreno</h2>
+            
+                    <div class="card-body">
+                      <img src="../../assets/imagenes/{{movie.image}}" class="card-img-top img-fluid" alt="...">
+                      <a routerLink="/Proximamente" class="btn btn-primary2">Preventa</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </section>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <section id="afiliados">
+    <img src="../../../assets/imagenes/Afiliados.jpg" alt="imagen de afiliados">
+  </section>
+
+  <section class="color">
+
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Informacion legal</a></li>
+        <li class="list-inline-item"><a href="#">Acerca de nosotros </a></li>
+        <li class="list-inline-item"><a href="#">Contactos </a></li>
+        <li class="list-inline-item"><a href="#">Preguntas frecuentes </a></li>
+        <li class="list-inline-item"><a href="#">Convenios</a></li>
+    </ul>
+    <p class="copyright">Movie Reaction © 2024</p>
+    </section>
+
+
+  </body>
+  </html>

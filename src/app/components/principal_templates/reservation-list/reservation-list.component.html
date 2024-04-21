@@ -1,0 +1,50 @@
+<body>
+  
+
+<nav class="navbar navbar-expand sm bg-dark navbar-dark ">
+  <ul class="navbar-nav">
+    <li class="navabar-item">
+    <a routerLink="/usuarios"routerLinkActive="active" class="nav-link">Lista de Empleados</a>
+  </li>
+  <li class="navabar-item">
+    <a routerLink="/usuarios/registrar" routerLinkActive="active" class="nav-link">Registrar Usuario</a>
+  </li>
+  </ul>
+ 
+  
+  
+
+  
+</nav>
+<h1>Lista de Empleados</h1>
+<div class="container">
+<table class=" table table-striped">
+<thead class="table-dark">
+  <tr>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th></th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{usuario.id}}</td>
+      <td>{{usuario.name}}</td>
+      <td>{{usuario.lastName}}</td>
+      <td>{{usuario.phone}}</td>
+      <td>{{usuario.email}}</td>
+      <td id="boton">
+        <button   [routerLink]="['/actualizar-empleado', usuario.id]" class="btn btn-info  ">Editar</button>
+         <button (click)="eliminarUsuario(usuario.id)" class ="btn btn-info">Eliminar</button>
+
+      </td>
+    </tr>
+  </tbody>
+  
+  </table>
+</div>
+</body>
+<router-outlet></router-outlet>

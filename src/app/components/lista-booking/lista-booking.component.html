@@ -1,0 +1,27 @@
+<body>
+    <div class="col-md-6 offset-md-3">
+      <h1 class="text-center">Actualizar Reservacion</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Nombre de la pelicula :</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="booking.name" name="nombre">
+            </div>
+            <div class="form-group">
+                <label>Categoria :</label>
+                <input type="text" class="form-control" id="Apellido" [(ngModel)]="booking.sala" name="sala">
+            </div>
+            <div class="form-group">
+                <label>Fecha de estreno:</label>
+                <input type="date" class="form-control" id="Telefono" [(ngModel)]="booking.name" name="fecha ">
+            </div>
+            <div class="form-group">
+                <label>Descripcion :</label>
+                <input type="text" class="form-control" id="Email" [(ngModel)]="booking.name" name="Descripcion">
+            </div>
+
+      
+                <button type="submit" class="boton">Actualizar</button>
+  </form>
+  </div>
+</body>
+     

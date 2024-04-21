@@ -1,0 +1,42 @@
+
+<div id="Contenedor">
+       
+
+<h1>Actualizar Reserva</h1>
+<div class="container">
+<table class=" table table-striped" style="width: 100%;">
+<thead class="table-dark"  style="width: 100%;">
+  <tr>
+      
+    <th>Nombre de la pelicula</th>
+    <th>Hora</th>
+    <th>Sala</th>
+    <th>Sillas</th>
+    <th></th>
+    
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let booking of booking ">
+     
+      <td>{{booking.name}}</td>
+      <td>{{booking.hora_funcion}}</td>
+      <td>{{booking.sala}}</td>
+      <td>{{booking.asientos }}</td>
+
+     
+
+      <td>
+        <button [routerLink]="['/actualizar-reserva', booking.id]" class="btn btn-info">Editar</button>
+         <button (click)="eliminarReservacion(booking.id)" class ="btn btn-info">Eliminar</button>
+        
+      </td>
+    </tr>
+  </tbody>
+   </table>
+
+   <
+   
+</div>
+
+

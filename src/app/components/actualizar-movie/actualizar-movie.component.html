@@ -1,0 +1,46 @@
+
+<body>
+    <div class="col-md-6 offset-md-3">
+        <h1 class="text-center">Actualizar Pelicula</h1>
+        <form (ngSubmit)=" onSubmit()">
+        <div class="form-group">
+        <label>Nombre :</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="movie.name" name="nombre">
+        </div>
+        <div class="form-group">
+            <label>Categoria :</label>
+            <input type="text" class="form-control" id="Apellido" [(ngModel)]="movie.category" name="categoria">
+            </div>
+            <div class="form-group">
+                <label>Fecha de estreno:</label>
+                <input type="date" class="form-control" id="Telefono" [(ngModel)]="movie.date" name="fecha ">
+                </div>
+                <div class="form-group">
+                    <label>Descripcion :</label>
+                    <input type="text" class="form-control" id="Email" [(ngModel)]="movie.description" name="Descripcion">
+                    </div>
+                    <div>
+                        <input class=" file"  type="file" (change)="onFileSelected($event)">
+                </div>
+          <section class="boton">     
+          <button class="b1 btn bg-success">Guardar</button>
+          <button class="b2 btn ">Modificar</button>
+        </section>  
+        
+        
+        <section class="card">
+            <div class="card" style="width: 18rem;">
+                <img [src]="selectedImageUrl" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ movie.name }}</h5>
+                <p class="card-text">{{ movie.category }}</p>
+                <p class="card-text">{{ movie.date | date }}</p>
+                <p class="card-text">{{ movie.description }}</p>
+                <a href="#" class="btn btn-primary">Reservar</a>
+              </div>
+            </div>
+          </section>
+        </form>
+        </div>
+     </body>
+        

@@ -1,0 +1,38 @@
+<mat-toolbar class="menu">
+    <div  class="container">
+
+        
+         
+             <img routerLink="/home" src="../../assets/imagenes/logo2.png" alt="">
+           
+          
+    
+        <a mat-button (click)="scrollToElement('estreno')"><mat-icon >theaters</mat-icon>Cartelera</a>
+        <button mat-button (click)="mostrarAlertaConstruccion()"><mat-icon >subscriptions</mat-icon>Suscripciones</button>
+        <button mat-button (click)="mostrarAlertaConstruccion()">
+          <mat-icon>fastfood</mat-icon>
+        </button>
+     
+        <div class="left-section">
+         
+       
+        <input id="input">
+     </div>
+      <div class="right-section">
+        
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="selectLocation('Ubicación 1')">Bogota</button>
+          <button mat-menu-item (click)="selectLocation('Ubicación 2')">Medellin</button>
+          <button mat-menu-item (click)="selectLocation('Ubicación 3')">Cali</button>
+        </mat-menu>
+        
+        <a mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon  style="font-size: 20px;" id="location"> location_on</mat-icon>
+        </a>
+        <a mat-button routerLink="/login" id="ingresar" ><mat-icon >person</mat-icon> Ingresar</a>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+  

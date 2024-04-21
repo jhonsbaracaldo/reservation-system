@@ -1,0 +1,64 @@
+<body>
+<div class="cabezera">
+  <img src="../../assets/imagenes/kunfu.jpg" alt="">
+  <section class="titulo">
+      <h1>Kung fu Panda 4</h1> 
+      <p>Titulo Original: Profe paseme</p>
+      <p>Estreno: 25-04-2024</p>
+      <p>Para toda la familia</p>
+      <p>Animacion, Aventura, Comedia</p>
+      <button><h3>Reservar</h3></button>
+  </section>
+</div>
+
+<section class="containerprincipal">
+  <form (ngSubmit)="onSubmit()">
+      <section class="formulario">
+          <h1>Reservar</h1>  
+          <p>Pelicula</p>
+          <select id="pelicula" name="pelicula" title="Selecciona la pelicula" [(ngModel)]="booking.name">
+              <option value="Kungfu Panda">Kunfu Panda</option>
+              <option value="Mi villano favorito">Mi villano favorito</option>
+              <option value="Dead pool 3">Dead pool 3</option>
+          </select>
+          <p>Hora de la función: {{ booking.hora_funcion | dateTimeFormat }}</p> 
+          <input type="datetime-local" id="datetime" name="datetime" title="Selecciona la fecha y hora de la función" [(ngModel)]="booking.hora_funcion">
+          <p>Sala</p>
+          <select id="silla" name="Hour" title="Tipo de sala" [(ngModel)]="booking.sala">
+              <option value="Sala 3D">3D</option>
+              <option value="Sala 2D">2D</option>
+          </select> 
+          <p>Cantidad de Asientos</p>
+          <input type="text" name="Asientos" [(ngModel)]="booking.asientos">
+          <p></p>  
+          <button>Comprar</button>
+      </section>
+  </form>
+  <section class="Modulo">
+      <video width="640" height="360" controls>
+          <source src="../../assets/imagenes/Kung Fu Panda 4  Tráiler Oficial Universal Pictures  HD_1080p.mp4" type="video/mp4">
+         
+        </video>
+        <ng-container id="notifiacacion" *ngIf="!reservationDetails">
+          <h2>No existen reservaciones creadas aún.</h2>
+        </ng-container>
+  </section>
+  <br>
+ 
+</section>
+
+
+<section class="color">
+  <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Informacion legal</a></li>
+      <li class="list-inline-item"><a href="#">Acerca de nosotros </a></li>
+      <li class="list-inline-item"><a href="#">Contactos </a></li>
+      <li class="list-inline-item"><a href="#">Preguntas frecuentes </a></li>
+      <li class="list-inline-item"><a href="#">Convenios</a></li>
+  </ul>
+  <p class="copyright">Movie Reaction © 2024</p>
+</section>
+</body>
+
+
+

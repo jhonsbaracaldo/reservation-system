@@ -1,0 +1,37 @@
+<body>
+<h1>Lista de películas</h1>
+<div class="container">
+  <ng-container *ngIf="movies && movies.length > 0; else noMoviesTemplate">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Fecha</th>
+          <th>Descripción</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td>{{ movie.id }}</td>
+          <td>{{ movie.name }}</td>
+          <td>{{ movie.category }}</td>
+          <td>{{ movie.date }}</td>
+          <td>{{ movie.description }}</td>
+         
+          <td id="boton">
+            <button  [routerLink]="['/update-movie', movie.id]" class="btn btn-info">Editar</button>
+  
+            <button (click)="eliminarMovie(movie.id)" class="btn btn-info">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #noMoviesTemplate>
+    <h3>No existen películas disponibles.</h3>
+  </ng-template>
+</div>
+</body>

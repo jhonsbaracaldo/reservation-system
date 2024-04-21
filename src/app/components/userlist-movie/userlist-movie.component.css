@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid black; /* Borde negro */
+    font-family: 'YourCustomFont', sans-serif; 
+    font-size: 36px; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    color: rgb(223, 212, 212); /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra del texto */
+}
+

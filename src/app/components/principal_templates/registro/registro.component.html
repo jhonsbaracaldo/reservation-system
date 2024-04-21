@@ -1,0 +1,43 @@
+
+
+
+<form (ngSubmit)=" onSubmit()">  
+<div id="Contenedor">
+    <h1>Registr<img src="../../assets/imagenes/pelicula.png " alt="imagen"></h1>
+  
+<section class=" mat-form-field">
+      <mat-label>Nombre</mat-label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="usuarioRegistro.firstName" name="nombre" autocomplete="off" placeholder="Nombre">
+  
+   
+      <mat-label >Apellido</mat-label>
+   <input type="text" class="form-control" id="Apellido" [(ngModel)]="usuarioRegistro.lastName" name="Apellido" autocomplete="off" placeholder="Apellido">
+   
+  
+      <mat-label  >Telefono</mat-label>
+      <input type="text" class="form-control" id="Telefono" [(ngModel)]="usuarioRegistro.phone" name="Telefono" autocomplete="off" placeholder="Telefono">
+  
+  
+      <mat-label >Correo</mat-label>
+     <input type="text" class="form-control" id="Email" [(ngModel)]="usuarioRegistro.email" name="email" autocomplete="off" placeholder="Correo">
+    
+
+      <mat-label >Contraseña</mat-label>
+   <input type="text" class="form-control" id="password" [(ngModel)]="usuarioRegistro.password" name="paswword" autocomplete="off" placeholder="Contraseña">
+ 
+    <button class="button btn ">Registrar</button>
+  </section>
+  </div>
+  
+</form>
+  <div id="contenedor2"> 
+ 
+
+<section id="imagenesSocial">
+  <button type="button" class="close" routerLink="/home" aria-label="Close">
+    <span aria-hidden="true">x</span>
+  </button>
+  </section>
+  </div>
+  <section class="color">
+

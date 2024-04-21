@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    color: white;
+    
+}
+
+
+.boton {
+    margin-top: 20px;
+  
+    display: flex;
+    justify-content: space-between;
+
+    .b2{
+        background-color: gold;
+    }
+
+}
+
+.card{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.file{
+    margin: 10px;
+}

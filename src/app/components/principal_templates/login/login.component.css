@@ -1,0 +1,132 @@
+body {
+  background-color: white;
+  margin: 0; /* Remove default margin */
+
+}
+
+.formulario{
+  margin-top: 35px;
+}
+div {
+  background: linear-gradient(180deg, rgb(193, 193, 198), rgb(51, 50, 50));
+  width: 80%; /* Adjust width for responsiveness */
+  max-width: 400px; /* Limit maximum width */
+  padding: 5vw; /* Use viewport units for padding */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(189, 61, 38);
+  border-radius: 15px;
+}
+
+.section-color {
+  background: transparent;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  padding: 1vw; /* Use viewport units for padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.close {
+  position: fixed;
+  margin-top: -25px;
+  margin-left: calc(50% - 75px); /* Center the close button */
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  height: 28px;
+}
+
+.section-color h1 {
+  margin-bottom: -5px;
+  color: white;
+  margin-top: 10px;
+}
+
+.section-color p {
+  margin-top: -15px;
+  color: white;
+}
+
+.section-color p {
+  margin-top: 10px;
+}
+
+.section-color2 {
+  background: transparent;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  padding: 2vw; /* Use viewport units for padding */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.section-color2 a {
+  font-size: small;
+  color: rgb(250, 240, 240);
+}
+
+#User {
+  text-align: center;
+  margin-top: 10vw; /* Use viewport units for margin */
+  color: white;
+}
+
+#User button {
+  width: 70%;
+  padding: 5%;
+  border-radius: 15px;
+  background: linear-gradient(80deg, rgb(238, 15, 15), rgb(234, 50, 4));
+}
+
+#User a {
+  margin-top: 5vw; /* Use viewport units for margin */
+  font-size: small;
+  color: rgb(217, 216, 237);
+}
+
+.color {
+  padding: 5vw 0;
+  background-color: #302d2d;
+  margin-top: 0;
+  color: white;
+}
+
+.color ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 4vw; /* Use viewport units for font size */
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.color li {
+  padding: 0 2vw; /* Use viewport units for padding */
+}
+
+.color ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.color ul a:hover {
+  opacity: 1;
+}
+
+.color .copyright {
+  margin-top: 2vw; /* Use viewport units for margin */
+  text-align: center;
+  font-size: 2vw; /* Use viewport units for font size */
+  color: #aaa;
+  margin-bottom: 0;
+}
