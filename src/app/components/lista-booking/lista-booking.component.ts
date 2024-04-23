@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Booking } from '../clases/booking';
-import swal from 'sweetalert2';
-import { BookingService } from '../services/booking.service';
+import { Booking } from 'src/app/services/class/booking'; 
+import Swal from 'sweetalert2'; 
+import { BookingService } from 'src/app/services/booking.service'; 
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

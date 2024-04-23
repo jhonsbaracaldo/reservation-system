@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Booking } from '../clases/booking';
+import { Booking } from 'src/app/services/class/booking'; 
 import swal from 'sweetalert2';
-import { BookingService } from '../services/booking.service';
-import { MovieService } from '../services/movie.service';
-import { Movie } from '../clases/movie';
+import { BookingService } from 'src/app/services/booking.service'; 
+import { MovieService } from 'src/app/services/movie.service'; 
+import { Movie } from 'src/app/services/class/movie'; 
 
 @Component({
   selector: 'app-actualizar-booking',

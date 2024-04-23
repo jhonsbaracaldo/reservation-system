@@ -1,7 +1,7 @@
 import swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/clases/class/usuario';
+import { Usuario } from 'src/app/services/class/class/usuario'; 
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DataService } from 'src/services/Model/data.service';
 

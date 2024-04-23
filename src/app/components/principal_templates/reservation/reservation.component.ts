@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Booking } from 'src/app/clases/booking';
+import { Booking } from 'src/app/services/class/booking'; 
 import { BookingService } from 'src/app/services/booking.service';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2'; 
 
 @Component({
   selector: 'app-reservation',
@@ -45,7 +45,7 @@ export class ReservationComponent implements OnInit {
 
   
   mostrarMensaje(booking: Booking): void {
-    swal.fire({
+    Swal.fire({
       title: 'Reserva exitosa',
       html: `¡Tu reserva ha sido realizada con éxito!<br>
              Detalles de la reserva:<br>

@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './vistas/login/login.component';
-import { ViewMovieComponent } from './vistas/view-movie/view-movie.component';
-import { RegistroComponent } from './vistas/registro/registro.component';
-import { ReservationComponent } from './vistas/reservation/reservation.component';
-import{ LoaderComponent} from './vistas/loader/loader.component';
-import { ReservationListComponent } from './vistas/reservation-list/reservation-list.component';
-import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
-import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
-import { RegisterMovieComponent } from './register-movie/register-movie.component';
-import { ListaMovieComponent } from './lista-movie/lista-movie.component';
-import { ActualizarMovieComponent } from './actualizar-movie/actualizar-movie.component';
-import { UserlistMovieComponent } from './userlist-movie/userlist-movie.component';
-import { SoonMovieComponent } from './soon-movie/soon-movie.component';
-import { ActualizarBookingComponent } from './actualizar-booking/actualizar-booking.component';
-import { ListaBookingComponent } from './lista-booking/lista-booking.component';
+import { LoginComponent } from './components/principal_templates/login/login.component'; 
+import { ViewMovieComponent } from './components/principal_templates/view-movie/view-movie.component'; 
+import { RegistroComponent } from './components/principal_templates/registro/registro.component'; 
+import { ReservationComponent } from './components/principal_templates/reservation/reservation.component'; 
+import { LoaderComponent } from './components/principal_templates/loader/loader.component'; 
+import { ReservationListComponent } from './components/principal_templates/reservation-list/reservation-list.component'; 
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component'; 
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component'; 
+import { RegisterMovieComponent } from './components/register-movie/register-movie.component'; 
+import { ListaMovieComponent } from './components/lista-movie/lista-movie.component'; 
+import { ActualizarMovieComponent } from './components/actualizar-movie/actualizar-movie.component'; 
+import { UserlistMovieComponent } from './components/userlist-movie/userlist-movie.component'; 
+import { SoonMovieComponent } from './components/soon-movie/soon-movie.component'; 
+import { ActualizarBookingComponent } from './components/actualizar-booking/actualizar-booking.component'; 
+import { ListaBookingComponent } from './components/lista-booking/lista-booking.component'; 
 
 const routes: Routes = [
   { path: '', component: LoaderComponent},

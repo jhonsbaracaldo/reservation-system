@@ -55,7 +55,7 @@ body {
 
   
   #contenedor2 { 
-    background-image: url('../../../assets/imagenes/movie.png') ;
+    background-image: url('../../../../assets/imagenes/movie.png') ;
     background-size: 137% ; /* La imagen de fondo ocupa el 100% del ancho y ajusta automáticamente la altura */
       margin-top: -65px;
     width: 20%;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioRegitro } from '../clases/class/UsuarioRegistro';
-import { UsuariosService } from '../services/usuarios.service';
+import { UsuarioRegitro } from 'src/app/services/class/class/UsuarioRegistro'; 
+import { UsuariosService } from 'src/app/services/usuarios.service'; 
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-userlist-movie',

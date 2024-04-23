@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2'; // Cambia 'swal' a 'Swal'
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,7 @@ export class HeaderComponent {
   }
 
   mostrarAlertaConstruccion(): void {
-    swal.fire({
+    Swal.fire({
       title: 'En construcción',
       text: 'Estamos trabajando para brindarte un mejor servicio',
       icon: 'info'

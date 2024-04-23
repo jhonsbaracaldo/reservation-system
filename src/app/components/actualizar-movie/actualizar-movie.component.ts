@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../services/movie.service';
+import { MovieService } from 'src/app/services/movie.service'; 
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { Movie } from '../clases/movie';
+import { Movie } from 'src/app/services/class/movie'; 
 
 @Component({
   selector: 'app-actualizar-movie',
